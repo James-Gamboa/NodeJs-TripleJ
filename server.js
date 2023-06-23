@@ -30,6 +30,14 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200;
     // Enviar el contenido del archivo HTML como respuesta
     res.end(htmlAboutFile);
+  } else if (url === "/index.html") { 
+    // Leer el archivo HTML correspondiente a la ruta específica
+    const htmlIndexFile = fs.readFileSync('index.html', 'utf8');
+    // Configurar las cabeceras de la respuesta
+    res.setHeader('Content-Type', 'text/html');
+    res.statusCode = 200;
+    // Enviar el contenido del archivo HTML como respuesta
+    res.end(htmlIndexFile);
   } else {
     const notFoundHtmlFile = fs.readFileSync('notfound.html', 'utf8');
     // Manejar otras rutas o devolver una respuesta por defecto
