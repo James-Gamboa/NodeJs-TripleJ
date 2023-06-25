@@ -1,4 +1,6 @@
 # Equipo de trabajo
-James Guevara 
-Jason Aguilar
-Jason Umaña
+*James Guevara
+
+*Jason Aguilar
+
+*Jason Umaña
