@@ -11,10 +11,8 @@ const server = http.createServer((req, res) => {
     res.end(htmlFile);
   } else if (url === "/contact.html") {
     const htmlContactFile = fs.readFileSync('contact.html', 'utf8');
-    // Configurar las cabeceras de la respuesta
     res.setHeader('Content-Type', 'text/html');
     res.statusCode = 200;
-    // Enviar el contenido del archivo HTML como respuesta
     res.end(htmlContactFile);
   } else if (url === "/about.html") {
     const htmlAboutFile = fs.readFileSync('about.html', 'utf8');
